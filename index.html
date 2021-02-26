@@ -1,0 +1,473 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <title>Konrad Sosna - rekrutacja staż</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Mój projekt zaliczeniowy" />
+    <meta name="keywords" content="IAI, staż, html, css, javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet preconnect">
+    <link href="\main.css" rel="stylesheet" />
+    <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script defer src="\main.js"></script>
+
+    <link defer href="fontello/css/fontello.css" rel="stylesheet" />
+    <link defer rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link defer href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="content">
+
+        <!--             Nav             -->
+        <div class="top_links hover-red">
+            <a href="tel:517989511" title="Telephone">Tel: +48 517 989 511</a>
+            <a href="mailto:sklep@assassins-arms.com" title="Mail">E-mail: sklep@assassins-arms.com</a>
+
+            <a href="#" title="Facebook" target="_blank">assassinarms</a>
+
+        </div>
+
+        <div id="mid_bar">
+            <div id="logo">
+                <a href="#"><img src="img/logo.png" alt="Assassins Arms Shop" /></a>
+            </div>
+            <form>
+                <label style="font-size:0px;">Wpisz czego szukasz<input type="text" placeholder="Wpisz czego szukasz..." /></label>
+                <button type="submit" name="search" style="cursor: pointer;font-size:0px;">Search<i class="fa fa-search" style="color:#ffffff;font-size:16px;"></i></button>
+            </form>
+
+            <div id="basket">
+                <div class="acc">
+                    <span style="margin-right:9px;">pl</span>
+                    <img src="img/pl.png" width="22" height="15" style="margin-right:9px;" alt="language option - polish" />
+                    <i class="fa fa-angle-down"></i>
+                </div>
+
+                <div class="acc"><a href="#">twoje konto</a></div>
+
+                <div id="basket-logo">
+                    <div><img src="/img/rank.png" alt="badge;rank;basket" /><span class="badge">2</span></div>
+                    <div>
+                        <div class="basket_text">Twój koszyk</div>
+                        <div class="basket_prize">3 454,00 zł</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <nav>
+            <ul class="nav_bar hover-red">
+
+                <li id="menu1" class="nav_bar_li menu">
+                    <a href="#"><span>gotowe zestawy do gry</span></a>
+                    <ul id="dropdown1" class="dropdown">
+                        <li class="menu"><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                    </ul>
+                </li>
+
+                <li id="menu2" class="nav_bar_li menu">
+                    <a href="#">sprzęt</a>
+                    <ul id="dropdown2" class="dropdown">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                    </ul>
+
+                </li>
+
+                <li id="menu3" class="nav_bar_li menu">
+                    <a href="#">odzież</a>
+                    <ul id="dropdown3" class="dropdown">
+                        <li><a href="#">Option 1</a></li>
+                        <li><a href="#">Option 2</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav_bar_li menu"><a href="#">kulki</a></li>
+                <li class="nav_bar_li menu"><a href="#">wyprzedaże</a></li>
+            </ul>
+        </nav>
+
+        <script>
+
+            $('ul ul').hide();
+            $('li:has(ul)').hover(function () {
+                $('ul', this).toggle();
+            });
+
+        </script>
+
+
+        <div id="breadcrumb" class="hover-red">
+            <ol style="list-style-type:none;">
+                <li style=""><a href="#">Strona główna</a></li>
+                <li style=""><a href="#">Sprzęt</a></li>
+                <li style="">Marker Trippmann FT-50 Lite</li>
+            </ol>
+        </div>
+
+
+
+
+        <!--             Projector             -->
+
+        <div class="wrap projector">
+
+            <div id="left">
+
+                <div id="list">
+                    <i onclick="previous()" class="fa fa-angle-up rewind"></i>
+                    <a onclick="change(1)"><img src="/img/gun-small.png" alt="Tippmann_FT-_50_LITE_50_cal_Rental_black" /></a>
+                    <a onclick="change(2)"><img src="/img/gun-small.png" alt="Tippmann_FT-_50_LITE_50_cal_Rental_black" /></a>
+                    <a onclick="change(3)"><img src="/img/gun-small.png" alt="Tippmann_FT-_50_LITE_50_cal_Rental_black" /></a>
+                    <a onclick="change(4)"><img src="/img/gun-small.png" alt="Tippmann_FT-_50_LITE_50_cal_Rental_black" /></a>
+                    <a onclick="change(5)"><img src="/img/gun-small.png" alt="Tippmann_FT-_50_LITE_50_cal_Rental_black" /></a>
+                    <a onclick="change(6)"><img src="/img/gun-small.png" alt="Tippmann_FT-_50_LITE_50_cal_Rental_black" /></a>
+                    <i onclick="next()" class="fa fa-angle-down rewind"></i>
+                </div>
+
+                <div id="slider">
+                    <a style="overflow:hidden;z-index:-1;" href="#" id="preview"><img style="overflow:hidden;z-index:-1;" src="img/gun-1.png" alt="paintball gun"/></a>
+                </div>
+
+            </div>
+
+            <div id="right">
+
+                <h1><span>Marker Tippmann FT-50 LITE 50 cal Rental black</span></h1>
+                <h2></h2><h3></h3><h4></h4><h5></h5>
+                <h6>producent: <span style="color:red;text-transform:capitalize">Dye</span> kod produktu: 6578758769878</h6><br />
+                <h6>kolor:</h6>
+
+                <div class="right_container">
+                    <a href="#"><img src="/img/gun-color-1.png" alt="merker solor black" /></a>
+                    <a href="#"><img src="/img/gun-color-2.png" alt="merker solor green" /></a>
+                    <a href="#"><img src="/img/gun-color-3.png" alt="merker solor purple" /></a>
+                    <a href="#"><img src="/img/gun-color-1.png" alt="merker solor black" /></a>
+                    <a href="#"><img src="/img/gun-color-2.png" alt="merker solor green" /></a>
+                    <a href="#"><img src="/img/gun-color-3.png" alt="merker solor purple" /></a>
+                </div>
+
+                <div class="right_container">
+
+                    <div class="option">
+                        długość lufy:
+                        <label style="font-size:0px;">Długość lufy<select id="barrelLength">
+                            <option>120 cm</option>
+                        </select></label>
+                    </div>
+
+                    <div class="option">
+                        kaliber:
+                        <label style="font-size:0px;">Kaliber<select id="caliber">
+                            <option>55NU</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                        </select></label>
+                    </div>
+                </div>
+
+
+                <div class="right_container">
+                    <div class="deliver">
+                        <div class="stock">
+                            <div>
+                                <p>Dostępne na magazynie (14 szt.)</p>
+                                <p>Wysyłka dzisiaj</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deliver">
+                        <a class="deliver_a" href="#">SPRAWDŹ CZASY I KOSZTY WYSYŁKI</a>
+                    </div>
+                </div>
+
+                <div class="right_container" style="margin: 10px 0;">
+                    <div class="add_basket">
+                        <h5>1 499,00zł</h5>
+                        <h3>1 278,00zł</h3>
+                    </div>
+
+                    <div class="add_basket counter" style="border:1px solid black;height:60px;">
+                        <span id="minus" style="cursor:pointer;">-</span>
+                        <label style="font-size:0px;">Counter<input id="number" type="number" value="0" /></label>
+                        <span id="plus" style="cursor:pointer;">+</span>
+                    </div>
+
+                    <div class="add_basket">
+                        <a class="bt_bg" href="#" style="border:none;padding:0;">dodaj do koszyka</a>
+                    </div>
+                </div>
+
+                <div class="right_container">
+                    <div class="deliver">
+                        <img src="/img/cash.png" alt="cash back" style="margin-right:20px;" />
+                        <div>
+                            <p style="font-size:10px;font-weight:bold;">Znalazłeś ten produkt tanej?</p>
+                            <p style="font-size:10px;font-weight:600;color:#b62323;">Wynegocjuj dobrą cenę</p>
+                        </div>
+                    </div>
+
+                    <div class="deliver">
+                        <a href="#">Dodaj do porównania</a>
+                    </div>
+                </div>
+
+                <div class="right_container" style="border-top:1px solid lightgray;border-bottom:1px solid lightgray;margin-top:10px;">
+
+                    <div class="perks">
+                        <div class="perks_upper">
+                            <img src="/img/truck.png" alt="delivery" style="height: fit-content;margin-right:10px;">
+                            <div>
+                                <p>darmowa dostawa</p>
+                                <p>dla zamówień powyżej 600 zł</p>
+                            </div>
+                        </div>
+
+                        <div class="perks_upper" style="padding: 3px;padding-left: 10px;">
+                            <span style="font-size:36px;margin-right:10px;">%</span>
+                            <div>
+                                <p>zakup na raty</p>
+                                <p><a href="#">oblicz rate >></a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="perks">
+                        <div class="perks_upper">
+                            <img src="/img/return.png" alt="delivery" style="height: fit-content;margin-right:10px;">
+                            <div>
+                                <p>zwrot towaru</p>
+                                <p>do 14 dni od daty zakupu</p>
+                            </div>
+                        </div>
+
+                        <div class="perks_upper">
+                            <img src="/img/medal.png" alt="delivery" style="height: fit-content;margin-right:10px;">
+                            <div>
+                                <p>gwarancja 12 miesięcy</p>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--             Hotspot             -->
+        <div class="wrap" style="width:100%;">
+
+            <h2><img src="img/marker.png" alt="paintball gun"/><span>dobierz do kopletu</span></h2>
+
+            <div class="blog_content">
+
+                <div class="hotspot">
+                    <div class="article">
+                        <a href="#" target="_self" title="Maska empire e-flex google (black)"><img src="img/mask.png" alt="paintball mask"/></a>
+                        <div class="text" style="text-transform:uppercase;font-size:11px;"><a href="#" target="_self" title="Maska empire e-flex google (black)">maska empire e-flex google (black)</a>
+                        <h3 style="text-align:center">139,00 zł</h3></div>
+                    </div>
+                </div>
+
+                <div class="hotspot">
+
+                    <div class="article">
+                        <a href="#" target="_self" title="Maska empire e-flex google (black)"><img src="img/mask.png" alt="paintball mask"/></a>
+                        <div class="text" style="text-transform:uppercase;font-size:11px;"><a href="#" target="_self" title="Maska empire e-flex google (black)">maska empire e-flex google (black)</a>
+                        <h3 style="text-align:center">139,00 zł</h3></div>
+                    </div>
+                </div>
+
+                <div class="hotspot">
+                    <div class="article">
+                        <a href="#" target="_self" title="Maska empire e-flex google (black)"><img src="img/mask.png" alt="paintball mask"/></a>
+                        <div class="text" style="text-transform:uppercase;font-size:11px;"><a href="#" target="_self" title="Maska empire e-flex google (black)">maska empire e-flex google (black)</a>
+                        <h3 style="text-align:center">139,00 zł</h3></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--             Description             -->
+        <div class="wrap">
+
+            <h2><img src="img/marker.png" alt="paintball gun"/><span>marker firmy tippmann</span></h2>
+
+            <div class="blog_content" >
+
+                <div class="textzone_description">
+
+                    <div id="parameters">
+                        <p class="upper_txt">stworzony z myślą o młodszych graczach, poprzez zmiejszenie kalubru do 50Cal.</p>
+                        <p class="upper_txt">FT-50 Lite wygladem przypomina marker FT-12 , jednak rózni się on trochę od swojego pierwowzoru.</p>
+                        <p class="upper_txt">Marker jest trochę krótszy, korpus ma bardziej agresywny charakter, średnica zewnętrzna oraz wewnętrzna  lufy jest mniejsza</p>
+                        <p class="upper_txt">oraz średnica otworu podającego kulki w magazynku grawitacyjnym jest dostosowana do kalubru 50Cal.</p>
+                        <ul>
+                            <li>kompaktowy militarny wygląd</li>
+                            <li>szybkie serwisowanie bez użycia narzędzi</li>
+                            <li>aluminiowy chwyt i body</li>
+                            <li>wewnętrzny system gazowy "inline bolt system"</li>
+                            <li>modułowa konstrukcja</li>
+                            <li>stałe przyrządy celownicze</li>
+                            <li>Zestaw zawiera magazynek grawitacyjny oraz barrel bag (osłona lufy)</li>
+                        </ul>
+                    </div>
+
+
+                    <div id="questions">
+                        <h1></h1><h2></h2><h3></h3>
+                        <h4>nasi klienci pytali o</h4>
+                        <ul>
+                            <li id="question1" class="menu" style="cursor:pointer;">
+                                <span class="hover-red">Czy ten pistolet jest idealny do gry w paintballa?</span>
+                                <span><i class="fa fa-angle-down"></i></span>
+                                <ul id="dropdownq1" class="dropdown">
+                                    <li>Zwane popularnie "długimi wiatrówkami" świetnie nadają się do precyzyjnego strzelania na dłuższe dystanse (powyżej 15-20 metrów). Mają większą moc niż wiatrówki pistolety, dłuższą lufę i z tego też względu są zdecydowanie bardziej celne. Wystrzeliwany z nich śrut ma również większe możliwości przebijania celu</li>
+                                </ul>
+                            </li>
+
+                            <li id="question2" class="menu" style="cursor:pointer;">
+                                <span class="hover-red">Czy ten model posiada mechanizm spustowy ?</span>
+                                <span><i class="fa fa-angle-down"></i></span>
+                                <ul id="dropdownq2" class="dropdown">
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis ex eu dolor interdum, imperdiet dictum enim lobortis. Cras quis facilisis massa. Fusce ac posuere mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus auctor cursus magna sed sagittis. Cras quis metus sit amet magna lobortis maximus ut sed nibh. Sed dapibus tristique ullamcorper. Vestibulum interdum consectetur leo eu placerat. Nulla vitae dictum augue, ut scelerisque dolor. In pellentesque ac elit a mattis. Curabitur sodales scelerisque erat rhoncus efficitur.</li>
+                                </ul>
+                            </li>
+
+                            <li id="question3" class="menu" style="cursor:pointer;">
+                                <span class="hover-red">Jakie dobrać naboje do tego sprzętu?</span>
+                                <span><i class="fa fa-angle-down"></i></span>
+                                <ul id="dropdownq3" class="dropdown">
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis ex eu dolor interdum, imperdiet dictum enim lobortis. Cras quis facilisis massa. Fusce ac posuere mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus auctor cursus magna sed sagittis. Cras quis metus sit amet magna lobortis maximus ut sed nibh. Sed dapibus tristique ullamcorper. Vestibulum interdum consectetur leo eu placerat. Nulla vitae dictum augue, ut scelerisque dolor. In pellentesque ac elit a mattis. Curabitur sodales scelerisque erat rhoncus efficitur.</li>
+                                </ul>
+                            </li>
+
+                            <li id="question4" class="menu" style="cursor:pointer;">
+                                <span class="hover-red">Nie moge znależć instrukcji, czy mi ją doślecie?</span>
+                                <span><i class="fa fa-angle-down"></i></span>
+                                <ul id="dropdownq4" class="dropdown">
+                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lobortis ex eu dolor interdum, imperdiet dictum enim lobortis. Cras quis facilisis massa. Fusce ac posuere mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus auctor cursus magna sed sagittis. Cras quis metus sit amet magna lobortis maximus ut sed nibh. Sed dapibus tristique ullamcorper. Vestibulum interdum consectetur leo eu placerat. Nulla vitae dictum augue, ut scelerisque dolor. In pellentesque ac elit a mattis. Curabitur sodales scelerisque erat rhoncus efficitur.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div id="side_panel">
+                    <div class="up">
+                        <a href="#"><img src="img/baner.png" alt="Baner" title="Assassins Arms Shop"></a>
+                    </div>
+                    <div class="dw">
+                        <span class="parameter">Numer seryjny</span>
+                        <span class="value">111000</span>
+                        <span class="parameter">Model</span>
+                        <span class="value">TIPPMANN FT-50 LITE 50</span>
+                        <span class="parameter">Wykończenie</span>
+                        <span class="value">Czarny mat</span>
+                        <span class="parameter">Kaliber</span>
+                        <span class="value">66 RL HV</span>
+                        <span class="parameter">Pojemność magazynka</span>
+                        <span class="value">10 nabojów</span>
+                        <span class="parameter">Mechanizm spustowy</span>
+                        <span class="value">SA (Single Action)</span>
+                        <span class="parameter">Siła nacisku spustu</span>
+                        <span class="value">1.8 kg / 4 lb</span>
+                        <span class="parameter">Wymiary</span>
+                        <span class="value">1200x123 mm</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!--             Blog             -->
+        <div class="wrap" style="width:100%;">
+
+            <h2><img src="img/marker.png" alt="paintball mgun"/><span>porady naszego eksperta</span></h2>
+
+            <div class="blog_content">
+
+                <div class="textzone">
+                    <h3>Jak stworzyć samemu farby do gry?</h3>
+                    <div class="article">
+                        <img src="img/blogpic1.png" alt="blog article" style="height: 202px; width: 241px;"/>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum posuere.</div>
+                    </div>
+                </div>
+
+                <div class="textzone">
+                    <h3>Jak dobrać naboje z farbą do mojego sprzętu?</h3>
+                    <div class="article">
+                        <img src="img/blogpic2.png" alt="blog article" style="height: 202px; width: 241px;"/>
+                        <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut justo eleifend, tempus lorem et, facilisis nisi. Praesent et eros non nisl iaculis ultricies eget nec odio. Fusce nec efficitur elit, non ullamcorper libero. Quisque consequat sapien in lacus condimentum posuere.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a id="button2"></a>
+    
+    <!--             Footer             -->
+
+    <footer>
+        <div id="footer_content">
+            <div class="footer_links">
+                <ul class="ul_header"><li><span>informacje</span></li></ul>
+                <ul>
+                    <li class="hover-red"><a href="#" title="Informacje o sklepie" target="_self">Informacje o sklepie</a></li>
+                    <li class="hover-red"><a href="#" title="Wysyłka" target="_self">Wysyłka</a></li>
+                    <li class="hover-red"><a href="#" title="Regulamin" target="_self">Regulamin</a></li>
+                    <li class="hover-red"><a href="#" title="Polityka prywatności" target="_self">Polityka prywatności</a></li>
+                    <li class="hover-red"><a href="#" title="Odstąpienie od umowy" target="_self">Odstąpienie od umowy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_links">
+                <ul class="ul_header"><li><span>moje konto</span></li></ul>
+                <ul>
+                    <li class="hover-red"><a href="#" title="Zarejestruj się" target="_self">Zarejestruj się</a></li>
+                    <li class="hover-red"><a href="#" title="Moje zaówienia" target="_self">Moje zaówienia</a></li>
+                    <li class="hover-red"><a href="#" title="Koszyk" target="_self">Koszyk</a></li>
+                    <li class="hover-red"><a href="#" title="Ulubione" target="_self">Ulubione</a></li>
+                    <li class="hover-red"><a href="#" title="Historia transakcji" target="_self">Historia transakcji</a></li>
+                </ul>
+            </div>
+
+            <div class="footer_links">
+                <ul class="ul_header hover-red"><li><a href="#"><span>kontakt</span></a></li></ul>
+                <ul>
+                    <li class="contact_li hover-red"><a href="tel:574046421" style="font-size:18px;color:#ffffff">+48 574 046 421</a></li>
+                    <li class="contact_li hover-red"><a href="mailto:kontakt@assasinarmy.pl" style="font-size:14px;color:#ffffff">kontakt@assasinarmy.pl</a></li>
+                    <li class="hover-red"><div class="social"><a href="#" target="_blank" title="Facebook"><img src="img/facebook.png" alt="facebook page"/></a></div><div class="social"><a href="#" target="_blank" title="Instagram"><img src="img/instagram.png" alt="instagram page"/></a></div></li>
+                </ul>
+            </div>
+
+            <div class="footer_links">
+                <ul class="ul_header hover-red"><li><a href="#"><span>moje zamówienia</span></a></li></ul>
+                <ul>
+                    <li class="hover-red"><i class="my_order fa fa-truck"></i><a href="#">Sprawdź status zamówienia</a></li>
+                    <li class="hover-red"><i class="my_order fa fa-search"></i><a href="#">Sledź przesyłkę</a></li>
+                    <li class="hover-red"><i class="my_order far fa-thumbs-down"></i><a href="#">Reklamacje</a></li>
+                    <li class="hover-red"><i class="my_order demo-icon icon-level-up"></i><a href="#">Zwroty</a></li>
+                    <li class="hover-red"><i class="my_order fas fa-info-circle"></i><a href="#">Informacje o wymianie</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="footer_logo"><a href="#" target="_blank" title="IdoSell Shop"><img src="img/opartyo_IdoSellShop_white.png" class="iai_logo" alt="IdeSellShop logo"/></a></div>
+
+    </footer>
+</body>
+</html>
